@@ -1,3 +1,6 @@
+const btn = document.getElementById('menu-btn')
+const menu = document.getElementById('menu')
+
 const input = document.getElementById('link-input')
 const linkForm = document.getElementById('link-form')
 const errMsg = document.getElementById('err-msg')
@@ -29,4 +32,10 @@ const formSubmit = (e) => {
         alert('Success')
     }
 }
+const navToggle = () => {
+    btn.classList.toggle('open')
+    menu.classList.toggle('hidden')
+    menu.classList.toggle('flex')
+}
 linkForm.addEventListener('submit', formSubmit)
+btn.addEventListener('click', navToggle)
